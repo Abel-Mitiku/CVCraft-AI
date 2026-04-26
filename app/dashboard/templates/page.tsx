@@ -14,19 +14,7 @@ import TemplatePreview from "./components/template-preview";
 import LoadingSkeleton from "./components/loading-skeleton";
 import { CheckSession } from "@/app/components/check-session";
 import { supabase } from "@/app/lib/supabaseClient";
-
-interface Template {
-  id: string;
-  name: string;
-  description: string;
-  category: "classic" | "modern" | "minimal" | "creative" | "professional";
-  isPremium: boolean;
-  rating: number;
-  downloads: number;
-  thumbnail: string;
-  colors: string[];
-  features: string[];
-}
+import { Template } from "./types/template";
 
 export default function TemplatesPage() {
   const router = useRouter();
