@@ -1,18 +1,6 @@
 import { Star, Eye, Check, Crown } from "lucide-react";
 import TemplateBadge from "./template-badge";
-
-interface Template {
-  id: string;
-  name: string;
-  description: string;
-  category: "classic" | "modern" | "minimal" | "creative" | "professional";
-  isPremium: boolean;
-  rating: number;
-  downloads: number;
-  thumbnail: string;
-  colors: string[];
-  features: string[];
-}
+import { Template } from "../types/template";
 
 interface Props {
   templates: Template[];
