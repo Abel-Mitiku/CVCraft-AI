@@ -147,7 +147,7 @@ function StripeCheckoutForm({
 
 export function BillingClientPage() {
   const router = useRouter();
-  // const searchParams = useSearchParams();
+  const searchParams = useSearchParams();
 
   const [loading, setLoading] = useState(true);
   const [subscription, setSubscription] = useState<Subscription | null>(null);
@@ -171,17 +171,17 @@ export function BillingClientPage() {
       sub?.cancel_at_period_end || sub?.cancelAtPeriodEnd || false,
   });
 
-  // useEffect(() => {
-  //   // const success = searchParams.get("success");
-  //   // const plan = searchParams.get("plan");
-  //   if (success === "true" && plan) {
-  //     showToast(
-  //       "success",
-  //       `✅ Successfully upgraded to ${plan.charAt(0).toUpperCase() + plan.slice(1)}!`,
-  //     );
-  //     router.replace("/dashboard/billing");
-  //   }
-  // }, [searchParams, router]);
+  useEffect(() => {
+    const success = searchParams.get("success");
+    const plan = searchParams.get("plan");
+    if (success === "true" && plan) {
+      showToast(
+        "success",
+        `✅ Successfully upgraded to ${plan.charAt(0).toUpperCase() + plan.slice(1)}!`,
+      );
+      router.replace("/dashboard/billing");
+    }
+  }, [searchParams, router]);
 
   useEffect(() => {
     const fetchData = async () => {
