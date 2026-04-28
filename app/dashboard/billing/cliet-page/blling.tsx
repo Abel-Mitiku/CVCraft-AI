@@ -21,9 +21,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-// const stripePromise = loadStripe(
-//   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
-// );
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+);
 
 type Plan = "free" | "pro" | "business";
 type Status = "active" | "canceled" | "past_due" | "trialing";
@@ -147,7 +147,7 @@ function StripeCheckoutForm({
 
 export function BillingClientPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
   const [loading, setLoading] = useState(true);
   const [subscription, setSubscription] = useState<Subscription | null>(null);
@@ -171,17 +171,17 @@ export function BillingClientPage() {
       sub?.cancel_at_period_end || sub?.cancelAtPeriodEnd || false,
   });
 
-  useEffect(() => {
-    const success = searchParams.get("success");
-    const plan = searchParams.get("plan");
-    if (success === "true" && plan) {
-      showToast(
-        "success",
-        `✅ Successfully upgraded to ${plan.charAt(0).toUpperCase() + plan.slice(1)}!`,
-      );
-      router.replace("/dashboard/billing");
-    }
-  }, [searchParams, router]);
+  // useEffect(() => {
+  //   // const success = searchParams.get("success");
+  //   // const plan = searchParams.get("plan");
+  //   if (success === "true" && plan) {
+  //     showToast(
+  //       "success",
+  //       `✅ Successfully upgraded to ${plan.charAt(0).toUpperCase() + plan.slice(1)}!`,
+  //     );
+  //     router.replace("/dashboard/billing");
+  //   }
+  // }, [searchParams, router]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -635,7 +635,7 @@ export function BillingClientPage() {
               </button>
             </div>
             <div className="p-5">
-              {/* <Elements
+              <Elements
                 stripe={stripePromise}
                 options={{ clientSecret, appearance: { theme: "flat" } }}
               >
@@ -643,7 +643,7 @@ export function BillingClientPage() {
                   onSuccess={handlePaymentSuccess}
                   onError={(msg) => showToast("error", msg)}
                 />
-              </Elements> */}
+              </Elements>
               <div className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500">
                 <ShieldCheck className="w-3.5 h-3.5" /> Encrypted by Stripe •
                 Test Mode (Use `4242 4242 4242 4242`)
