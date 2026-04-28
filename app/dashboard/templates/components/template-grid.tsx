@@ -1,17 +1,5 @@
 import TemplateCard from "./template-card";
-
-interface Template {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  isPremium: boolean;
-  rating: number;
-  downloads: number;
-  thumbnail: string;
-  colors: string[];
-  features: string[];
-}
+import { Template } from "../types/template";
 
 interface Props {
   templates: Template[];
