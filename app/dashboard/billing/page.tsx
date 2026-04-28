@@ -1,3 +1,4 @@
+"use client";
 import { BillingClientPage } from "./cliet-page/blling";
 export const dynamic = "force-dynamic";
 

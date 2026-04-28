@@ -21,9 +21,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
-);
+// const stripePromise = loadStripe(
+//   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+// );
 
 type Plan = "free" | "pro" | "business";
 type Status = "active" | "canceled" | "past_due" | "trialing";
@@ -635,7 +635,7 @@ export function BillingClientPage() {
               </button>
             </div>
             <div className="p-5">
-              <Elements
+              {/* <Elements
                 stripe={stripePromise}
                 options={{ clientSecret, appearance: { theme: "flat" } }}
               >
@@ -643,7 +643,7 @@ export function BillingClientPage() {
                   onSuccess={handlePaymentSuccess}
                   onError={(msg) => showToast("error", msg)}
                 />
-              </Elements>
+              </Elements> */}
               <div className="mt-4 flex items-center justify-center gap-2 text-xs text-gray-500">
                 <ShieldCheck className="w-3.5 h-3.5" /> Encrypted by Stripe •
                 Test Mode (Use `4242 4242 4242 4242`)
