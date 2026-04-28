@@ -145,7 +145,7 @@ function StripeCheckoutForm({
   );
 }
 
-export default function BillingClientPage() {
+export function BillingClientPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
