@@ -1,4 +1,3 @@
-// app/dashboard/editor/editor-client.tsx
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
