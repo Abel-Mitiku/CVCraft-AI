@@ -9,7 +9,13 @@ export async function POST(req: Request) {
       success: false,
     });
   }
-  const { data, error } = await supabase.auth.signUp({ email, password });
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      emailRedirectTo: "https://cv-craft-ai-omega.vercel.app/auth/callback",
+    },
+  });
 
   if (error) {
     return NextResponse.json({ error: error.message, success: false });

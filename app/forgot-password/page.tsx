@@ -62,7 +62,7 @@ export default function ForgotPasswordPage() {
             check your inbox (and spam folder).
           </p>
           <Link
-            href="/auth/login"
+            href="/login"
             className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition"
           >
             <ArrowLeft className="w-4 h-4" />
