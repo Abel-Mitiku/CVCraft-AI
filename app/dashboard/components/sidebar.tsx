@@ -42,9 +42,9 @@ export default function DashboardSidebar({ user, currentPath }: SidebarProps) {
   return (
     <aside className="hidden md:flex flex-col w-64 bg-gray-50 border-r border-gray-200">
       <div className="p-4 border-b border-gray-200">
-        <p className="text-sm font-medium text-gray-900">{user.email}</p>
+        <p className="text-sm font-medium text-gray-900">{user?.email}</p>
         <p className="text-xs text-gray-500">
-          {user.plan === "pro" ? "✨ Pro Plan" : "Free Plan"}
+          {user?.plan === "pro" ? "✨ Pro Plan" : "Free Plan"}
         </p>
       </div>
 
@@ -57,10 +57,10 @@ export default function DashboardSidebar({ user, currentPath }: SidebarProps) {
               currentPath === item.href
                 ? "bg-blue-100 text-blue-700"
                 : "text-gray-700 hover:bg-gray-100"
-            } ${item.pro && user.plan !== "pro" ? "opacity-50 cursor-not-allowed" : ""}`}
+            } ${item.pro && user?.plan !== "pro" ? "opacity-50 cursor-not-allowed" : ""}`}
           >
             <span>{item.name}</span>
-            {item.pro && user.plan !== "pro" && (
+            {item.pro && user?.plan !== "pro" && (
               <span className="ml-auto text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded">
                 Pro
               </span>
@@ -69,7 +69,7 @@ export default function DashboardSidebar({ user, currentPath }: SidebarProps) {
         ))}
       </nav>
 
-      {user.plan !== "pro" && (
+      {user?.plan !== "pro" && (
         <div className="p-4 border-t border-gray-200">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4 text-white">
             <p className="text-sm font-medium mb-2">Unlock AI Features</p>

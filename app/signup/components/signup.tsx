@@ -29,10 +29,12 @@ export default function SignupPage() {
         headers: { "Content-Type": "application/json" },
       });
       const data = await res.json();
+      console.log(data);
       if (data.success) {
         alert(data.message);
         router.push("/login");
       }
+      setError(data.error);
     } catch (err) {
       setError("Something went wrong. Please try again.");
     } finally {

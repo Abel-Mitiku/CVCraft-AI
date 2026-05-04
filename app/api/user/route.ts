@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { supabaseAdmin } from "@/app/lib/supabaseAdmin";
-import { error } from "console";
 
 export async function POST(req: Request) {
   const { userId } = await req.json();
@@ -8,7 +7,11 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "No user id required", success: false });
   }
   try {
-    const user = await supabaseAdmin.from("profiles").select("*").single();
+    const user = await supabaseAdmin
+      .from("profiles")
+      .select("*")
+      .eq("id", userId)
+      .single();
     if (!user) {
       return NextResponse.json({ error: "No user fetched", success: false });
     }
