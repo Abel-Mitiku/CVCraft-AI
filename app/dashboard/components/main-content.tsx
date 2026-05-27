@@ -5,7 +5,7 @@ export default function StatsCard({ user, stats }: any) {
       <div className="flex items-start justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">
-            Welcome back, {user.user_metadata.name || "Friend"} 👋
+            Welcome back, {user?.user_metadata.name || "Friend"} 👋
           </h1>
           <p className="text-gray-600 mt-1">
             Ready to create your next great resume?
