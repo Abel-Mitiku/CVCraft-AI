@@ -4,7 +4,7 @@ interface Resume {
   id: string;
   title: string;
   template: string;
-  updatedAt: string;
+  updated_at: string;
   atsScore?: number;
   isPublic: boolean;
   downloads: number;
