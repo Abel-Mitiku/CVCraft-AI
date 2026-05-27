@@ -76,7 +76,7 @@ export default function ResumesPage() {
     open: false,
     resumeId: null,
   });
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -100,6 +100,7 @@ export default function ResumesPage() {
 
         if (session && isMounted) {
           setSession(session);
+          setUser(session.user); // set user from session so it's available before fetchUserData completes
           await fetchUserData(session.user.id);
         }
       } catch (error) {
