@@ -70,8 +70,8 @@ export default function ResumeList({
                   <div>
                     <p className="font-medium text-gray-900">{resume.title}</p>
                     <p className="text-sm text-gray-600 md:hidden">
-                      {resume.template.charAt(0).toUpperCase() +
-                        resume.template.slice(1)}
+                      {resume?.template?.charAt(0).toUpperCase() +
+                        resume.template?.slice(1)}
                     </p>
                   </div>
                 </div>
@@ -87,8 +87,8 @@ export default function ResumeList({
                         : "bg-gray-100 text-gray-700"
                   }`}
                 >
-                  {resume.template.charAt(0).toUpperCase() +
-                    resume.template.slice(1)}
+                  {resume.template?.charAt(0).toUpperCase() +
+                    resume.template?.slice(1)}
                 </span>
               </td>
 
