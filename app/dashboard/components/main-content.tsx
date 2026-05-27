@@ -22,19 +22,19 @@ export default function StatsCard({ user, stats }: any) {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
         <StatItem
           label="Resumes Created"
-          value={stats.totalResumes}
+          value={stats?.totalResumes}
           icon="document"
-          trend={stats.weeklyGrowth > 0 ? `+${stats.weeklyGrowth}%` : null}
+          trend={stats?.weeklyGrowth > 0 ? `+${stats?.weeklyGrowth}%` : null}
         />
         <StatItem
           label="Avg. ATS Score"
-          value={`${stats.avgAtsScore}%`}
+          value={`${stats?.avgAtsScore}%`}
           icon="chart"
-          trend={stats.atsImprovement ? `+${stats.atsImprovement}%` : null}
+          trend={stats?.atsImprovement ? `+${stats?.atsImprovement}%` : null}
         />
         <StatItem
           label="Downloads"
-          value={stats.totalDownloads}
+          value={stats?.totalDownloads}
           icon="download"
         />
       </div>

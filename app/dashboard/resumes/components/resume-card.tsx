@@ -7,12 +7,13 @@ import {
   Eye,
   EyeOff,
 } from "lucide-react";
+import { useEffect } from "react";
 
 interface Resume {
   id: string;
   title: string;
   template: string;
-  updatedAt: string;
+  updated_at: string;
   atsScore?: number;
   isPublic: boolean;
   downloads: number;
@@ -120,13 +121,14 @@ export default function ResumeCard({
         </div>
 
         <div className="mt-2 flex flex-wrap items-center gap-2 text-sm text-gray-600">
-          <span
+          {/* <span
             className={`px-2 py-0.5 rounded text-xs font-medium ${getTemplateBadge(resume.template)}`}
           >
-            {resume.template.charAt(0).toUpperCase() + resume.template.slice(1)}
-          </span>
+            {resume?.template?.charAt(0).toUpperCase() +
+              resume?.template?.slice(1)}
+          </span> */}
           <span>•</span>
-          <span>Updated {formatDate(resume.updatedAt)}</span>
+          <span>Updated {formatDate(resume.updated_at)}</span>
           {resume.downloads > 0 && (
             <>
               <span>•</span>

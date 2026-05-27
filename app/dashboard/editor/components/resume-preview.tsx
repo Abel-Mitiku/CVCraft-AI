@@ -262,6 +262,7 @@ export default function ResumePreview({
           method: "GET",
         });
         const result = await res.json();
+        console.log("Result : ", result);
         console.log("📦 API Response:", {
           success: result.success,
           category: result.data?.category,
@@ -286,9 +287,7 @@ export default function ResumePreview({
       }
     };
 
-    if (templateId) {
-      fetchTemplate();
-    }
+    fetchTemplate();
   }, [templateId]);
 
   const TemplateComponent = (() => {

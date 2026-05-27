@@ -21,7 +21,7 @@ interface Resume {
   id: string;
   title: string;
   template: string;
-  updatedAt: string;
+  updated_at: string;
   atsScore?: number;
   isPublic: boolean;
   downloads: number;
@@ -32,7 +32,7 @@ const MOCK_RESUMES: Resume[] = [
     id: "1",
     title: "Software Engineer Resume",
     template: "modern",
-    updatedAt: "2024-02-15T10:30:00Z",
+    updated_at: "2024-02-15T10:30:00Z",
     atsScore: 92,
     isPublic: false,
     downloads: 3,
@@ -41,7 +41,7 @@ const MOCK_RESUMES: Resume[] = [
     id: "2",
     title: "Marketing Manager CV",
     template: "classic",
-    updatedAt: "2024-02-10T14:20:00Z",
+    updated_at: "2024-02-10T14:20:00Z",
     atsScore: 87,
     isPublic: true,
     downloads: 12,
@@ -50,7 +50,7 @@ const MOCK_RESUMES: Resume[] = [
     id: "3",
     title: "Data Analyst Portfolio",
     template: "minimal",
-    updatedAt: "2024-02-01T09:15:00Z",
+    updated_at: "2024-02-01T09:15:00Z",
     atsScore: 0,
     isPublic: false,
     downloads: 0,
@@ -123,6 +123,10 @@ export default function ResumesPage() {
         });
 
         const data = await res.json();
+        console.log("Resume card : ", data);
+        data.resumes.map((r: any) => {
+          console.log(r.template);
+        });
 
         if (data.success && isMounted) {
           setResumes(data.resumes || []);
@@ -173,7 +177,7 @@ export default function ResumesPage() {
     .sort((a, b) => {
       if (sortBy === "updated") {
         return (
-          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
+          new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
         );
       }
       if (sortBy === "name") {
@@ -205,7 +209,7 @@ export default function ResumesPage() {
         ...original,
         id: `${Date.now()}`,
         title: `${original.title} (Copy)`,
-        updatedAt: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
       };
       setResumes((prev) => [newResume, ...prev]);
     }

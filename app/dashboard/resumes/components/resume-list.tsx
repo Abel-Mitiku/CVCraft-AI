@@ -12,7 +12,7 @@ interface Resume {
   id: string;
   title: string;
   template: string;
-  updatedAt: string;
+  updated_at: string;
   atsScore?: number | null;
   isPublic: boolean;
   downloads: number;
@@ -111,7 +111,7 @@ export default function ResumeList({
               </td>
 
               <td className="px-6 py-4 text-sm text-gray-600">
-                {formatDate(resume.updatedAt)}
+                {formatDate(resume.updated_at)}
               </td>
 
               <td className="px-6 py-4 text-right">
