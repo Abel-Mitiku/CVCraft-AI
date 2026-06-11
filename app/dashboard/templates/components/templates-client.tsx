@@ -247,7 +247,10 @@ export default function TemplatesPage() {
             <LoadingSkeleton viewMode={viewMode} />
           </main>
         </div>
-        <MobileNav currentPath="/dashboard/templates" />
+        <MobileNav
+          user={user || { email: "user@example.com", plan: "free" }}
+          currentPath="/dashboard/templates"
+        />
       </div>
     );
   }
@@ -387,7 +390,10 @@ export default function TemplatesPage() {
         />
       )}
 
-      <MobileNav currentPath="/dashboard/templates" />
+      <MobileNav
+        user={user || { email: "user@example.com", plan: "free" }}
+        currentPath="/dashboard/templates"
+      />
     </div>
   );
 }

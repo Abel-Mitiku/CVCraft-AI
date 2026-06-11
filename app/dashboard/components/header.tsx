@@ -40,7 +40,7 @@ export default function DashboardHeader({ user }: any) {
           <div className="relative">
             <button className="flex items-center gap-2">
               <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                {user.user_metadata?.avatar_url ? (
+                {user?.user_metadata?.avatar_url ? (
                   <img
                     src={user.user_metadata.avatar_url}
                     alt="Avatar"
@@ -48,7 +48,7 @@ export default function DashboardHeader({ user }: any) {
                   />
                 ) : (
                   <span className="text-sm font-medium text-gray-600">
-                    {user.email?.[0].toUpperCase()}
+                    {user?.email?.[0]?.toUpperCase() || "U"}
                   </span>
                 )}
               </div>

@@ -150,7 +150,10 @@ export default function DashboardPage() {
         </main>
       </div>
 
-      <MobileNav currentPath="/dashboard" />
+      <MobileNav
+        user={user || { email: "user@example.com", plan: "free" }}
+        currentPath="/dashboard"
+      />
     </div>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import { Star, Eye, Check, Crown } from "lucide-react";
 import TemplateBadge from "./template-badge";
 import { Template } from "../types/template";
@@ -24,7 +26,8 @@ export default function TemplateCard({
 
   return (
     <div
-      className={`group bg-white rounded-xl border-2 overflow-hidden transition-all ${
+      onClick={() => onSelect(template.id)}
+      className={`group bg-white rounded-xl border-2 overflow-hidden transition-all cursor-pointer ${
         isSelected
           ? "border-purple-600 shadow-lg shadow-purple-100"
           : "border-gray-200 hover:border-purple-300 hover:shadow-lg"
@@ -69,15 +72,24 @@ export default function TemplateCard({
         </div>
 
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+          {}
           <button
-            onClick={() => onPreview(template)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onPreview(template);
+            }}
             className="p-2 bg-white rounded-full text-gray-700 hover:text-purple-600 hover:scale-110 transition"
             title="Preview"
           >
             <Eye className="w-4 h-4" />
           </button>
+
+          {}
           <button
-            onClick={() => onSelect(template.id)}
+            onClick={(e) => {
+              e.stopPropagation();
+              onSelect(template.id);
+            }}
             className={`px-4 py-2 rounded-full font-medium text-sm transition ${
               isSelected
                 ? "bg-purple-600 text-white"

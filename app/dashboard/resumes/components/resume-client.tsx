@@ -100,7 +100,7 @@ export default function ResumesPage() {
 
         if (session && isMounted) {
           setSession(session);
-          setUser(session.user); // set user from session so it's available before fetchUserData completes
+          setUser(session.user);
           await fetchUserData(session.user.id);
         }
       } catch (error) {
@@ -199,8 +199,28 @@ export default function ResumesPage() {
   };
 
   const handleDeleteResume = async (resumeId: string) => {
-    setResumes((prev) => prev.filter((r) => r.id !== resumeId));
-    setDeleteModal({ open: false, resumeId: null });
+    try {
+      const res = await fetch("/api/resume/delete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: resumeId }),
+      });
+
+      const data = await res.json();
+
+      if (!data.success) {
+        alert(data.message || "Failed to delete resume. Please try again.");
+        return;
+      }
+
+      setResumes((prev) => prev.filter((r) => r.id !== resumeId));
+      setDeleteModal({ open: false, resumeId: null });
+    } catch (error) {
+      console.error("Delete error:", error);
+      alert(
+        "A network error occurred. Please check your connection and try again.",
+      );
+    }
   };
 
   const handleDuplicateResume = async (resumeId: string) => {
@@ -320,7 +340,10 @@ export default function ResumesPage() {
         />
       )}
 
-      <MobileNav currentPath="/dashboard/resumes" />
+      <MobileNav
+        user={user || { email: "user@example.com", plan: "free" }}
+        currentPath="/dashboard/resumes"
+      />
     </div>
   );
 }

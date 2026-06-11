@@ -1,3 +1,5 @@
+"use client";
+
 import { Download, Share2, FileText, Printer } from "lucide-react";
 
 interface Props {
@@ -7,8 +9,9 @@ interface Props {
 
 export default function ExportMenu({ onExportPDF, className = "" }: Props) {
   return (
-    <div className={`fixed bottom-6 left-6 right-6 lg:hidden ${className}`}>
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-4">
+    <div className={`lg:hidden ${className}`}>
+      {}
+      <div className="sticky bottom-0 bg-white border-t border-gray-200 shadow-[0_-4px_10px_rgba(0,0,0,0.05)] p-4 z-40">
         <p className="text-sm font-medium text-gray-900 mb-3">Export Options</p>
 
         <div className="grid grid-cols-2 gap-2">
