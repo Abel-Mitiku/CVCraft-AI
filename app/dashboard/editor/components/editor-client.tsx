@@ -123,6 +123,11 @@ export default function EditorPage() {
   useEffect(() => {
     const resumeIdParam = searchParams.get("resume");
     console.log("resume id", resumeIdParam);
+
+    if (resumeIdParam) {
+      setResumeId(resumeIdParam);
+    }
+
     const fetchResumeData = async () => {
       if (!resumeIdParam) return;
       const res = await fetch("/api/resume", {
@@ -192,7 +197,6 @@ export default function EditorPage() {
       if (!session?.user?.id) return;
 
       setIsSaving(true);
-      const resumeIdParam = searchParams.get("resume");
 
       try {
         const resumePayload: Record<string, any> = {
@@ -207,11 +211,11 @@ export default function EditorPage() {
 
         let result;
 
-        if (resumeIdParam && resumeIdParam.trim()) {
+        if (resumeId && resumeId.trim()) {
           result = await supabase
             .from("resumes")
             .update(resumePayload)
-            .eq("id", resumeIdParam)
+            .eq("id", resumeId)
             .eq("user_id", session.user.id);
         } else {
           result = await supabase
@@ -221,7 +225,12 @@ export default function EditorPage() {
             .single();
 
           if (result.data?.id) {
-            setResumeId(result.data.id);
+            const newId = result.data.id;
+            setResumeId(newId);
+
+            const url = new URL(window.location.href);
+            url.searchParams.set("resume", newId);
+            window.history.replaceState(null, "", url.toString());
           }
         }
 
@@ -235,7 +244,7 @@ export default function EditorPage() {
         setIsSaving(false);
       }
     },
-    [session, resumeId, templateId, searchParams],
+    [session, resumeId, templateId],
   );
 
   const triggerAutosave = useCallback(
