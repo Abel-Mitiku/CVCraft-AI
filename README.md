@@ -39,9 +39,11 @@
 <br />
 
 <div align="center">
- <img width="1836" height="941" alt="image" src="https://github.com/user-attachments/assets/385bab8d-b58e-48a9-9016-5fae91bcba44" />
+ <img width="1831" height="935" alt="image" src="https://github.com/user-attachments/assets/c650fcdd-741c-4b8e-8f6b-fc9419966760" />
 
- <img width="1835" height="942" alt="image" src="https://github.com/user-attachments/assets/739baf09-f17f-4bd4-a300-be848524b1d6" />
+ <img width="1833" height="938" alt="image" src="https://github.com/user-attachments/assets/66a3e097-5cd0-4692-a322-e9d25b968d59" />
+
+
 
   <p><i>✍️ AI-Powered Editor & 📈 Real-Time ATS Analysis</i></p>
 </div>
