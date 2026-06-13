@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+  # 📄 ResumeAI
+  
+  **Build ATS-Optimized Resumes That Get You Hired**
+  
+  *Stop letting robots reject your applications. Start building resumes that pass ATS filters and impress recruiters.*
 
-First, run the development server:
+  <br />
+  
+  [![Next.js](https://img.shields.io/badge/Next.js_14-000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![Supabase](https://img.shields.io/badge/Supabase-181818?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+  [![Groq](https://img.shields.io/badge/Groq_AI-FF4F00?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTUtMTAtNXpNMiAxN2wxMCA1IDEwLTVNMiAxMmwxMCA1IDEwLTUiLz48L3N2Zz4=&logoColor=white)](https://groq.com/)
+  [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+  [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+  <br />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  [Live Demo](#) • [Report Bug](https://github.com/yourusername/resumeai/issues) • [Request Feature](https://github.com/yourusername/resumeai/issues)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+##  The Problem We Solve
 
-To learn more about Next.js, take a look at the following resources:
+You spend hours crafting the perfect resume, only to have it rejected by an ATS (Applicant Tracking System) before a human ever sees it. Or worse—you get the interview, but your resume doesn't accurately reflect your impact.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**ResumeAI** changes the game. It's an intelligent resume builder that combines **lightning-fast AI content generation** (powered by Groq) with **ATS optimization algorithms** to help you create resumes that both robots and recruiters love.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✨ Why ResumeAI is Different
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ⚡ Blazing Fast AI Generation
+Powered by **Groq's LPU Inference Engine**, our AI generates professional bullet points, summaries, and skill descriptions in milliseconds—not seconds. No more waiting around.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🎯 ATS-First Architecture
+Every template, every font choice, every formatting decision is optimized for ATS parsing. We've tested against Workday, Taleo, Greenhouse, and Lever.
+
+### 🧠 Context-Aware Suggestions
+The AI doesn't just write generic content. It understands your industry, experience level, and target role to generate hyper-relevant suggestions.
+
+---
+
+## 🚀 Core Features
+
+### 📝 Intelligent Resume Builder
+* **Multi-Resume Management** - Create unlimited resumes for different job targets
+* **Auto-Save & Version Control** - Never lose your work; track changes over time
+* **Real-Time Preview** - See your changes instantly as you type
+* **Duplicate & Iterate** - Clone existing resumes to test different strategies
+
+### 🤖 AI Writing Assistant (Powered by Groq)
+* **Bullet Point Generator** - Transform basic job duties into impact-driven achievements
+* **Professional Summary Writer** - Craft compelling opening statements in seconds
+* **Skill Enhancement** - Get industry-specific skill recommendations
+* **Grammar & Tone Polish** - Professional language refinement
+* **Action Verb Suggestions** - Replace weak verbs with powerful alternatives
+* **Quantification Helper** - AI suggests metrics and numbers to add impact
+
+### 📊 ATS Optimization Engine
+* **ATS Compatibility Score** - Get a real-time score out of 100
+* **Keyword Gap Analysis** - See which critical keywords you're missing
+* **Formatting Validation** - Ensure your layout is ATS-parseable
+* **Section Completeness Check** - Never miss a critical section
+* **Industry Benchmarking** - Compare your resume against others in your field
+
+### 🎨 Professional Templates
+* **Classic** - Traditional, clean, recruiter-approved
+* **Modern** - Contemporary design with subtle flair
+* **Minimal** - Ultra-clean, maximum readability
+* **Creative** - For designers and creative professionals
+* **Executive** - Senior-level, leadership-focused layouts
+
+### 💼 Job Matching & Analysis
+* **Job Description Parser** - Paste a JD and extract key requirements
+* **Match Score** - See how well your resume aligns with a specific job
+* **Tailoring Suggestions** - Get specific recommendations to improve match rate
+* **Keyword Prioritization** - Know which keywords matter most
+
+### 📤 Export & Share
+* **PDF Export** - Download print-ready, high-quality PDFs
+* **Print Optimization** - Perfect formatting for physical copies
+* **Public Link Sharing** - Generate shareable links (Pro feature)
+* **DOCX Export** - Editable Word documents (coming soon)
+
+### 🔐 Security & Privacy
+* **Supabase Auth** - Enterprise-grade authentication
+* **Data Encryption** - Your resume data is encrypted at rest
+* **Row Level Security** - Database-level isolation ensures privacy
+* **GDPR Compliant** - Your data belongs to you
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Frontend Framework** | Next.js 14 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS + CSS Modules |
+| **UI Components** | Radix UI, Shadcn/ui |
+| **Backend & Database** | Supabase (PostgreSQL) |
+| **AI Engine** | **Groq API** (Llama 3 70B / Mixtral 8x7B) |
+| **PDF Generation** | @react-pdf/renderer, Puppeteer |
+| **Authentication** | Supabase Auth (JWT) |
+| **File Storage** | Supabase Storage Buckets |
+| **Deployment** | Vercel (Edge Network) |
+
+---
+
+## 📸 How It Works
+
+```mermaid
+graph LR
+    A[Create Account] --> B[Choose Template]
+    B --> C[Fill In Sections]
+    C --> D[AI Enhancement]
+    D --> E[ATS Analysis]
+    E --> F{Score > 80?}
+    F -->|No| D
+    F -->|Yes| G[Export PDF]
+    G --> H[Apply & Get Hired!]
