@@ -17,7 +17,7 @@
 
   <br />
 
-  [ Live Demo](https://cv-craft-ai-omega.vercel.app/) • [Report Bug](https://github.com/yourusername/cv-craft-ai/issues) • [Request Feature](https://github.com/yourusername/cv-craft-ai/issues)
+  [ Live Demo](https://cv-craft-ai-omega.vercel.app/) • [Report Bug](https://github.com/Abel-Mitiku/cv-craft-ai/issues) • [Request Feature](https://github.com/Abel-Mitiku/cv-craft-ai/issues)
 
 </div>
 
@@ -30,22 +30,27 @@
 </div>
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=600&fit=crop" alt="CV Craft AI Dashboard" width="100%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);" />
+ <img width="1838" height="938" alt="image" src="https://github.com/user-attachments/assets/e89073dc-8018-439d-a38b-a6368ad78667" />
+
+
   <p><i>📊 Intuitive Dashboard - Manage all your resumes in one place</i></p>
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=700&fit=crop" alt="AI Resume Editor" width="48%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);" />
-  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=700&fit=crop" alt="ATS Analysis" width="48%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);" />
+ <img width="1836" height="941" alt="image" src="https://github.com/user-attachments/assets/385bab8d-b58e-48a9-9016-5fae91bcba44" />
+
+ <img width="1835" height="942" alt="image" src="https://github.com/user-attachments/assets/739baf09-f17f-4bd4-a300-be848524b1d6" />
+
   <p><i>✍️ AI-Powered Editor & 📈 Real-Time ATS Analysis</i></p>
 </div>
 
 <br />
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop" alt="Professional Templates" width="100%" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);" />
+  <img width="1835" height="942" alt="image" src="https://github.com/user-attachments/assets/702240e0-60c7-429c-a56a-4dbae130b484" />
+
   <p><i>🎨 Multiple Professional Templates - Choose Your Style</i></p>
 </div>
 
